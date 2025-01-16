@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+# Commands to run after the package is removed
+echo "Running postrm script for 2048-in-terminal"
+rm -f /usr/games/2048-in-terminal
+
+exit 0
