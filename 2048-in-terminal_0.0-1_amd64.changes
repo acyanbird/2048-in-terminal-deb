@@ -1,0 +1,38 @@
+Format: 1.8
+Date: Mon, 13 Jan 2025 23:55:46 +0800
+Source: 2048-in-terminal
+Binary: 2048-in-terminal 2048-in-terminal-dbgsym
+Architecture: source amd64
+Version: 0.0-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: acyanbird <acyanbird@gmail.com>
+Changed-By: acyanbird <acyanbird@gmail.com>
+Description:
+ 2048-in-terminal - Terminal-based clone of the 2048 game.
+Changes:
+ 2048-in-terminal (0.0-1) UNRELEASED; urgency=low
+ .
+   * Initial release.
+   *
+Checksums-Sha1:
+ 5307ae09efa00bf767df284476cd3154ac897b84 953 2048-in-terminal_0.0-1.dsc
+ 7f8a4cc8fda1f43f03b70f8e8a9ce8368a8e2994 464329 2048-in-terminal_0.0.orig.tar.gz
+ 86e26ee6c537ae28b2dd86c4f70a4971d7a0750c 2864 2048-in-terminal_0.0-1.debian.tar.xz
+ f973b18d8fe947b115a3547ba53b9044e7465a44 16500 2048-in-terminal-dbgsym_0.0-1_amd64.deb
+ 86de46da23030cc5a76ae314ef1b023327ec5841 5605 2048-in-terminal_0.0-1_amd64.buildinfo
+ 1c25c7db8c46f4ba37d2a7a0c47eef7ec8893f22 8936 2048-in-terminal_0.0-1_amd64.deb
+Checksums-Sha256:
+ 850fa6ff88cf936bdf1d3ef7c49853726ae84544f2807a3a873863efa104da0f 953 2048-in-terminal_0.0-1.dsc
+ 1bbc49190dda4c10cba4347f15412d83474066f402960295707f7c21992ac8c8 464329 2048-in-terminal_0.0.orig.tar.gz
+ 7cd40b5e90df65dc57fd9a9a240f3f35579a3be4c4a2138319dac6f8a3a6d9ff 2864 2048-in-terminal_0.0-1.debian.tar.xz
+ ed8cdf267f9e37127b8d9f7ec9b303c0d48590ef33110b6917bee99d0925a50d 16500 2048-in-terminal-dbgsym_0.0-1_amd64.deb
+ 89611ce3e9f165c9a5f3f763f67792de67a0f23d8b6ea9c42f1cc563903b99af 5605 2048-in-terminal_0.0-1_amd64.buildinfo
+ 30bb98b7a450081317d5ceec4c51ce395bb5ce6823d9af64c81496d0e2312a27 8936 2048-in-terminal_0.0-1_amd64.deb
+Files:
+ e086043edd4dafb0bb75ad107735944f 953 games optional 2048-in-terminal_0.0-1.dsc
+ fb1369b2631a5055b8b351bd0d8339c8 464329 games optional 2048-in-terminal_0.0.orig.tar.gz
+ da6fdf17d80f1c4f73200d7038ad2dab 2864 games optional 2048-in-terminal_0.0-1.debian.tar.xz
+ b39275d28eb961a2e0cfde1463333c19 16500 debug optional 2048-in-terminal-dbgsym_0.0-1_amd64.deb
+ 60cd3ece21ffce18ae767ef38e3e9eb6 5605 games optional 2048-in-terminal_0.0-1_amd64.buildinfo
+ 9927524deaeb2966a4a289b07c78859a 8936 games optional 2048-in-terminal_0.0-1_amd64.deb

@@ -1,0 +1,81 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package 2048-in-terminal
+dpkg-buildpackage: info: source version 0.0-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by acyanbird <acyanbird@gmail.com>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean
+   dh_auto_clean
+	make -j8 clean
+make[1]: Entering directory '/home/acy/cs/packaging/2048/2048-in-terminal-0.0'
+make[1]: Leaving directory '/home/acy/cs/packaging/2048/2048-in-terminal-0.0'
+   dh_clean
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building 2048-in-terminal using existing ./2048-in-terminal_0.0.orig.tar.gz
+dpkg-source: info: building 2048-in-terminal in 2048-in-terminal_0.0-1.debian.tar.xz
+dpkg-source: info: building 2048-in-terminal in 2048-in-terminal_0.0-1.dsc
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+   dh_auto_configure
+   dh_auto_build
+	make -j8 "INSTALL=install --strip-program=true"
+make[1]: Entering directory '/home/acy/cs/packaging/2048/2048-in-terminal-0.0'
+cc -MM src/board.c -MQ _build/board.o -MF _build/board.d
+cc -MM src/draw.c -MQ _build/draw.o -MF _build/draw.d
+cc -MM src/main.c -MQ _build/main.o -MF _build/main.d
+cc -MM src/save.c -MQ _build/save.o -MF _build/save.d
+cc -c -g -O2 -ffile-prefix-map=/home/acy/cs/packaging/2048/2048-in-terminal-0.0=. -fstack-protector-strong -Wformat -Werror=format-security src/save.c -o _build/save.o
+cc -c -g -O2 -ffile-prefix-map=/home/acy/cs/packaging/2048/2048-in-terminal-0.0=. -fstack-protector-strong -Wformat -Werror=format-security src/board.c -o _build/board.o
+cc -c -g -O2 -ffile-prefix-map=/home/acy/cs/packaging/2048/2048-in-terminal-0.0=. -fstack-protector-strong -Wformat -Werror=format-security src/draw.c -o _build/draw.o
+cc -c -g -O2 -ffile-prefix-map=/home/acy/cs/packaging/2048/2048-in-terminal-0.0=. -fstack-protector-strong -Wformat -Werror=format-security src/main.c -o _build/main.o
+cc -g -O2 -ffile-prefix-map=/home/acy/cs/packaging/2048/2048-in-terminal-0.0=. -fstack-protector-strong -Wformat -Werror=format-security _build/board.o _build/draw.o _build/main.o _build/save.o -o _build/2048-in-terminal `pkg-config --libs ncurses`
+make[1]: Leaving directory '/home/acy/cs/packaging/2048/2048-in-terminal-0.0'
+   dh_auto_test
+   create-stamp debian/debhelper-build-stamp
+   dh_prep
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/acy/cs/packaging/2048/2048-in-terminal-0.0'
+dh_install
+make[1]: Leaving directory '/home/acy/cs/packaging/2048/2048-in-terminal-0.0'
+   debian/rules override_dh_install
+make[1]: Entering directory '/home/acy/cs/packaging/2048/2048-in-terminal-0.0'
+dh_install  --sourcedir=/home/acy/cs/packaging/2048/2048-in-terminal-0.0
+make[1]: Leaving directory '/home/acy/cs/packaging/2048/2048-in-terminal-0.0'
+   dh_installdocs
+   dh_installchangelogs
+   debian/rules override_dh_installman
+make[1]: Entering directory '/home/acy/cs/packaging/2048/2048-in-terminal-0.0'
+dh_installman
+make[1]: Leaving directory '/home/acy/cs/packaging/2048/2048-in-terminal-0.0'
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_dwz -a
+   dh_strip -a
+   dh_makeshlibs -a
+   dh_shlibdeps -a
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package '2048-in-terminal-dbgsym' in '../2048-in-terminal-dbgsym_0.0-1_amd64.deb'.
+dpkg-deb: building package '2048-in-terminal' in '../2048-in-terminal_0.0-1_amd64.deb'.
+ dpkg-genbuildinfo -O../2048-in-terminal_0.0-1_amd64.buildinfo
+ dpkg-genchanges -O../2048-in-terminal_0.0-1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian 2048-in-terminal_0.0-1_amd64.changes ...
+W: 2048-in-terminal: initial-upload-closes-no-bugs [usr/share/doc/2048-in-terminal/changelog.Debian.gz:1]
+W: 2048-in-terminal source: maintainer-script-lacks-debhelper-token [debian/postrm]
+W: 2048-in-terminal: no-manual-page [usr/games/2048-in-terminal]
+W: 2048-in-terminal source: syntax-error-in-dep5-copyright Continuation line not in paragraph (line 28). Missing a dot on the previous line? [debian/copyright]
+Finished running lintian.
